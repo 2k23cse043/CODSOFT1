@@ -1,0 +1,29 @@
+#include <iostream> 
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+int main()
+{
+srand(time(0));
+int radnumber=rand()% 101;
+int guess;
+cout<<"WELCOME TO THE NUMBER GUESSING GAME!" <<endl;
+cout << "I have a number between 1 to 100. Guess What is it?" <<endl;
+do{
+cout<<"Enter Your Guessed Number: ";
+cin>>guess;
+if (guess>radnumber) 
+{
+cout<< "It's Too High! TRY AGAIN." <<endl; 
+} 
+else if (guess<radnumber) 
+{
+cout<<"It's Too Low! TRY AGAIN." <<endl;
+} 
+else
+{
+cout<< "Congratulations! Your Guess is Right." <<endl;
+}
+ } while (guess!=radnumber);
+return 0;
+}
